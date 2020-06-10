@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 
 import models from './models';
 import connectDataBase from './initDatabase';
+import routes from './routes';
 
 dotenv.config();
 
@@ -14,15 +15,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.post('/users', async (req, res) => {
-  const args = req.body;
-  try {
-    const user = await models.User.create(args);
-    res.json({ user });
-  } catch (error) {
-    console.log('error ', error);
-  }
-});
+routes(app);
 
 app.post('/categories', async (req, res) => {
   const args = req.body;
