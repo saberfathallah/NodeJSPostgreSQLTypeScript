@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   Category.associate = (models) => {
     Category.hasMany(models.Post, { onDelete: 'cascade', hooks: true });
+    Category.belongsTo(models.Category, { foreignKey: 'parent_id', onDelete: 'CASCADE' });
   };
   return Category;
 };

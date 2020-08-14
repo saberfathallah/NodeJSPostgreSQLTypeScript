@@ -1,26 +1,23 @@
 {
   "development": {
-    "username": "root",
+    "username": "mac",
     "password": null,
-    "database": "database_development",
+    "database": "dbforum",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "mac",
     "password": null,
-    "database": "database_test",
+    "database": "dbforum",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "mac",
     "password": null,
-    "database": "database_production",
+    "database": "dbforum",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "postgres"
   }
 }
