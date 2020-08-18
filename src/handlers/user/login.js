@@ -29,8 +29,7 @@ const login = async (req, res) => {
     ) {
       return res.status(400).json({ error: 'Vos identifiants ne semblent pas corrects.' });
     }
-
-    const token = jwt.sign({ id: userFromDB._id }, 'jwt_secret', { expiresIn: '24h' });
+    const token = jwt.sign({ id: userFromDB.id }, 'jwt_secret', { expiresIn: '24h' });
     return res
       .header('authorization', `Bearer ${token}`)
       .status(200)
